@@ -1,0 +1,43 @@
+<ion-content class="ion-padding">
+
+<div id="container">
+  
+  <ion-text color="dark">
+    <h1 style="font-size: 34px; font-weight: 700;">Selamat Datang</h1>
+    <!-- <p class="ion-text-center">Is an application dedicated to <br>Victoria Care Indonesia Tbk.</p> -->
+  </ion-text>
+
+  <div style="padding-top: 10%;">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button 
+            [routerLink]="['/login']" 
+            routerLinkActive="router-link-active"  
+            color="dark" 
+            expand="block">
+            Masuk
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button 
+            [routerLink]="['/register']" 
+            routerLinkActive="router-link-active" 
+            color="dark" 
+            expand="block" 
+            fill="outline">
+            Daftar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title size="small" color="medium" >Versi 0.0.1</ion-title>
+  </ion-toolbar>
+</ion-footer>

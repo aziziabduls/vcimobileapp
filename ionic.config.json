@@ -1,0 +1,7 @@
+{
+  "name": "vcimobileapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

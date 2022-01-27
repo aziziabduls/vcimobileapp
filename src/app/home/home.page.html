@@ -1,0 +1,125 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-title>
+      Home
+    </ion-title>
+
+    <ion-buttons slot="primary">
+      <ion-button (click)="goToProfilePage()" color="dark">
+        <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="primary" style="display: none;">
+      <ion-button (click)="openPane()" color="dark">
+        <ion-icon slot="icon-only" name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+    <ion-searchbar showCancelButton="focus" placeholder="Cari Outlet"></ion-searchbar>
+  </ion-header>
+
+  <!-- <div class="ion-padding user">
+    <ion-text>
+      <h1>Abdul Azizi</h1>
+      <ion-note>IT Programmer Staff</ion-note>
+    </ion-text>
+  </div> -->
+
+  <div class="ion-padding-top" >
+    <ion-slides [options]="slideOpts">
+
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-fab-button color="dark">
+              <ion-icon name="bicycle"></ion-icon>
+            </ion-fab-button>
+            <ion-card-subtitle class="ion-padding-top">Team Sales</ion-card-subtitle>
+            <ion-card-title style="font-size: 20px;">Salesman</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-fab-button color="dark">
+              <ion-icon name="receipt-outline"></ion-icon>
+            </ion-fab-button>
+            <ion-card-subtitle class="ion-padding-top">Team Promo</ion-card-subtitle>
+            <ion-card-title style="font-size: 20px;">Sales Promotion</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+
+    </ion-slides>
+  </div>
+  
+  <div>
+    <ion-card>
+      <!-- <img src="./madison.jpg" /> -->
+      <ion-card-header>
+        <ion-card-subtitle>Destination</ion-card-subtitle>
+        <ion-card-title>Madison, WI</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div>
+    <ion-list>
+
+      <ion-list-header>
+        Recent Conversations
+      </ion-list-header>
+      
+      <ion-item *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
+        <ion-icon name="storefront-outline" slot="start"></ion-icon>
+        <ion-label>
+          <h2>Leia</h2>
+          <h3>You're My Only Hope</h3>
+          <p>I've placed information vital to the survival...</p>
+        </ion-label>
+      </ion-item>
+    
+    </ion-list>
+  
+  </div>
+
+
+  <div style="display: none;" class="cupertino-pane">
+    <div class="ion-padding">
+      <h1>Account</h1>
+    </div>
+    <div class="content">
+      <ion-list>
+        <ion-item detail lines="none" (click)="goToProfilePage()">
+          <ion-icon name="storefront-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h2>{{user.name}}</h2>
+            <p>{{user.title}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>    
+  </div>
+
+  <!-- <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div> -->
+
+</ion-content>
